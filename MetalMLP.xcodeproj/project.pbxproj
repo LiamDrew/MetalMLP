@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0C497EDC2DEBE3AA00FD2644 /* MetalMLP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MetalMLP; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C497EEC2DEBE7BD00FD2644 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +45,7 @@
 		0C497ED32DEBE3AA00FD2644 = {
 			isa = PBXGroup;
 			children = (
+				0C497EEC2DEBE7BD00FD2644 /* README.md */,
 				0C497EDE2DEBE3AA00FD2644 /* MetalMLP */,
 				0C497EDD2DEBE3AA00FD2644 /* Products */,
 			);

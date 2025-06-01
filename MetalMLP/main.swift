@@ -11,6 +11,6 @@ print("Hello, World!")
 
 // Step 1: Import all the MNIST number data
 
-// Step 2: 
+// Step 2:
 
 
