@@ -73,33 +73,36 @@ do {
     let trainLabelsPath = "/Users/liam/Development/MetalMLP/MetalMLP/Data/train-labels-idx1-ubyte"
     let trainLabels = try MNISTFashionLoader.loadLabels(from: trainLabelsPath)
     print("Training labels: \(trainLabels.count)")
+       
     
-    // Step 2: Figure out how to properly clean up and represent all the data
+    // Step 2: Figure out how to represent and work with a single image
     
-    let outputImagePath = "/Users/liam/Development/MetalMLP/MetalMLP/SampleData/output.png"
+    let outputImagePath = "/Users/liam/Development/MetalMLP/MetalMLP/SampleData/output.pgm"
     let fileURL = URL(fileURLWithPath: outputImagePath)
     
+    let header = "P5\n\(28) \(28)\n255\n"
+    let headerData = Data(header.utf8)
+    let pixelData = Data(trainImages[0])
+    let combinedData = headerData + pixelData
+    
     do {
-        try trainImages[0].write(to: fileURL, atomically: true)
+        try combinedData.write(to: fileURL)
     } catch {
         print("Error writing to file: \(error)")
     }
     print(trainImages[0])
     
     
+    // Step 3: Figure out how to properly clean up and represent all the data
+    // (I think this step is already done, not everything needs to be visualized)
+    
+    // Step 4: Figure out how to do a single iteration of the training process manually.
+    
+    // Step 5: Figure out how to accelerate the training process with the GPU
+
     
 } catch {
     print("Error loading data: \(error)")
     print("Something got fucked up here")
 }
-
-//print("Training labels: \(trainLabels.count)")
-
-
-// Step 3: Figure out how to do the training process normally
-
-// Step 4: Figure out how to accelerate the training process with the GPU
-
-//
-
 
